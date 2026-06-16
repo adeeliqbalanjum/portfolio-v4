@@ -74,9 +74,9 @@ export default function Home() {
         </div>
 
         <div className="hero-inner">
-          <div className="status-pill reveal"><strong>Available</strong> for new projects — UAE · UK · USA</div>
+          <div className="status-pill reveal"><strong>Available</strong> for new projects</div>
           <h1 className="reveal"><span className="soft">WordPress developer</span> building fast, high-impact websites</h1>
-          <p className="subline reveal">I build and redesign WordPress & WooCommerce websites for businesses in the UAE, UK, and USA — from Figma designs to pixel-perfect, conversion-ready sites.</p>
+          <p className="subline reveal">I build and redesign WordPress & WooCommerce websites for businesses — from Figma designs to pixel-perfect, conversion-ready sites.</p>
           <div className="actions reveal">
             <a className="btn btn-dark" href="mailto:adeeliqbalajum@gmail.com">✦ Let&apos;s talk</a>
             <a className="btn btn-ghost" href="#projects">Browse work</a>
