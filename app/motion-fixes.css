@@ -11,8 +11,8 @@
 
 .gradient-stage {
   inset: -20% -14% 22%;
-  opacity: .46;
-  filter: blur(44px);
+  opacity: .48;
+  filter: blur(46px);
 }
 
 .gblob {
@@ -20,50 +20,55 @@
 }
 
 .gblob.orange {
-  left: 4%;
-  top: 26%;
-  width: 48vw;
-  height: 48vw;
-  animation: heroBubbleOrange 18s ease-in-out infinite alternate;
+  left: 1%;
+  top: 25%;
+  width: 50vw;
+  height: 50vw;
+  transform-origin: 12% 88%;
+  animation: heroBubbleOrangeWiper 9s cubic-bezier(.65, 0, .35, 1) infinite;
 }
 
 .gblob.purple {
-  right: -4%;
-  top: 0%;
-  width: 54vw;
-  height: 54vw;
-  animation: heroBubblePurple 22s ease-in-out infinite alternate;
+  right: -5%;
+  top: -2%;
+  width: 56vw;
+  height: 56vw;
+  transform-origin: 88% 12%;
+  animation: heroBubblePurpleWiper 10.5s cubic-bezier(.65, 0, .35, 1) infinite;
 }
 
 .gblob.green {
-  left: 36%;
+  left: 35%;
   top: 35%;
   width: 42vw;
   height: 42vw;
-  animation: heroBubbleGreen 20s ease-in-out infinite alternate;
+  animation: heroBubbleGreenPulse 7.5s ease-in-out infinite;
 }
 
 .pointer-glow {
-  opacity: .45;
+  opacity: .42;
   animation: heroPointerBreath 12s ease-in-out infinite alternate;
 }
 
-@keyframes heroBubbleOrange {
-  0% { transform: translate3d(-3%, 2%, 0) scale(1) rotate(0deg); }
-  50% { transform: translate3d(5%, -4%, 0) scale(1.08) rotate(12deg); }
-  100% { transform: translate3d(1%, 6%, 0) scale(.96) rotate(-8deg); }
+@keyframes heroBubbleOrangeWiper {
+  0% { transform: translate3d(-8%, 8%, 0) rotate(-14deg) scale(1); }
+  42% { transform: translate3d(15%, -9%, 0) rotate(10deg) scale(1.04); }
+  50% { transform: translate3d(17%, -10%, 0) rotate(12deg) scale(1.04); }
+  92% { transform: translate3d(-7%, 7%, 0) rotate(-13deg) scale(1); }
+  100% { transform: translate3d(-8%, 8%, 0) rotate(-14deg) scale(1); }
 }
 
-@keyframes heroBubblePurple {
-  0% { transform: translate3d(4%, -2%, 0) scale(1.02) rotate(0deg); }
-  50% { transform: translate3d(-5%, 5%, 0) scale(.95) rotate(-10deg); }
-  100% { transform: translate3d(2%, 3%, 0) scale(1.1) rotate(8deg); }
+@keyframes heroBubblePurpleWiper {
+  0% { transform: translate3d(7%, -7%, 0) rotate(13deg) scale(1.02); }
+  44% { transform: translate3d(-13%, 10%, 0) rotate(-11deg) scale(.98); }
+  52% { transform: translate3d(-15%, 12%, 0) rotate(-13deg) scale(.98); }
+  92% { transform: translate3d(6%, -6%, 0) rotate(12deg) scale(1.02); }
+  100% { transform: translate3d(7%, -7%, 0) rotate(13deg) scale(1.02); }
 }
 
-@keyframes heroBubbleGreen {
-  0% { transform: translate3d(0%, 2%, 0) scale(.98) rotate(0deg); }
-  50% { transform: translate3d(-4%, -5%, 0) scale(1.12) rotate(10deg); }
-  100% { transform: translate3d(5%, 3%, 0) scale(1.02) rotate(-6deg); }
+@keyframes heroBubbleGreenPulse {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(.9); opacity: .72; }
+  50% { transform: translate3d(0, -1.5%, 0) scale(1.2); opacity: .9; }
 }
 
 @keyframes heroPointerBreath {
