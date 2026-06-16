@@ -51,6 +51,48 @@
   animation: heroPointerFloat 13s ease-in-out infinite;
 }
 
+.project-board::before {
+  inset: -34%;
+  background:
+    radial-gradient(circle, rgba(255,122,24,.18) 0%, rgba(255,122,24,0) 62%) no-repeat,
+    radial-gradient(circle, rgba(168,85,247,.16) 0%, rgba(168,85,247,0) 64%) no-repeat,
+    radial-gradient(circle, rgba(34,197,94,.16) 0%, rgba(34,197,94,0) 64%) no-repeat;
+  background-size: 58% 58%, 62% 62%, 54% 54%;
+  background-position: 3% 38%, 96% 4%, 50% 88%;
+  filter: blur(30px);
+  opacity: .9;
+  transform: translate3d(0, 0, 0) scale(1.02);
+  animation: projectBoardBubbleSwap 24s cubic-bezier(.45, 0, .25, 1) infinite;
+  will-change: background-position, transform;
+}
+
+@keyframes projectBoardBubbleSwap {
+  0% {
+    background-position: 3% 38%, 96% 4%, 50% 88%;
+    transform: translate3d(0, 0, 0) scale(1.02) rotate(0deg);
+  }
+  18% {
+    background-position: 30% 8%, 64% 40%, 18% 72%;
+    transform: translate3d(1.5%, -1%, 0) scale(1.05) rotate(1deg);
+  }
+  36% {
+    background-position: 82% 18%, 16% 68%, 62% 24%;
+    transform: translate3d(-1%, 1%, 0) scale(1.03) rotate(-1deg);
+  }
+  54% {
+    background-position: 54% 84%, 38% 8%, 92% 58%;
+    transform: translate3d(1%, 1.5%, 0) scale(1.06) rotate(1.2deg);
+  }
+  72% {
+    background-position: 12% 74%, 88% 72%, 28% 16%;
+    transform: translate3d(-1.5%, -1%, 0) scale(1.04) rotate(-1.2deg);
+  }
+  100% {
+    background-position: 3% 38%, 96% 4%, 50% 88%;
+    transform: translate3d(0, 0, 0) scale(1.02) rotate(0deg);
+  }
+}
+
 @keyframes heroBubbleOrangeSwap {
   0% { transform: translate3d(-8%, 8%, 0) rotate(-14deg) scale(1); }
   18% { transform: translate3d(28%, -18%, 0) rotate(8deg) scale(1.06); }
@@ -108,5 +150,10 @@
   .gblob.green {
     width: 78vw;
     height: 78vw;
+  }
+
+  .project-board::before {
+    inset: -46%;
+    background-size: 82% 82%, 86% 86%, 76% 76%;
   }
 }
